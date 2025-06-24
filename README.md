@@ -38,7 +38,7 @@
     <h1>Contents</h1>
     <ul>
       <li><a href="#publications-simple">Publications</a></li>
-      <li><a href="#research-overview">Research Overview/a></li>
+      <li><a href="#research-overview">Research Overview</a></li>
     </ul>
 
     <!-- SIMPLE PUBLICATIONS SECTION -->
@@ -134,7 +134,7 @@
         These guarantees, however, assume that agents can actually play this equilibrium, which in turn requires every player to know the utilities of all others.
         A more realistic setting assumes that each agent knows only its own utility, yet can adapt its bid over repeated, synchronous rounds using limited feedback, such as the aggregate bid of all players.</p>
     <p><strong>Contributions.</strong> In <a href="#publications-simple">[C4]</a>, we study the repeated game induced by the Kelly mechanism. We prove that when all agents update
-        their bids via a dual-averaging no-regret algorithm and their utilities grow logarithmically with the resource they receive, the system converges to the Nash equilibrium of the one-shot game. .</p>
+        their bids via a dual-averaging no-regret algorithm and their utilities grow logarithmically with the resource they receive, the system converges to the Nash equilibrium of the one-shot game.</p>
 
   </div>
 </body>
