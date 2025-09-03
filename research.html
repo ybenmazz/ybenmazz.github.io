@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <link rel="stylesheet" href="jemdoc.css" type="text/css" />
+  <title>Research Topics- Younes Ben Mazziane</title>
+</head>
+<body>
+  <!--
+    This page collects detailed descriptions of the various research topics pursued by
+    Younes Ben Mazziane.  Each section corresponds to one of the themes originally
+    presented under the “Research Overview” on the single‑page site.  The wording of
+    the original paragraphs has been retained exactly while reorganizing them into
+    separate sections for clarity.  Internal links are adjusted where necessary.
+  -->
+  <table id="tlayout">
+    <tr>
+      <td id="layout-menu">
+        <div class="menu-item"><a href="index.html">Home</a></div>
+        <div class="menu-item"><a href="publications.html">Publications</a></div>
+        <div class="menu-item"><a href="research.html" class="current">Research</a></div>
+        <div class="menu-item"><a href="teaching.html">Teaching</a></div>
+      </td>
+      <td id="layout-content">
+        <div id="toptitle">
+          <h1>Research</h1>
+        </div>
+
+
+
+ <h3> Research Areas</h3>
+<ul>
+  <li><a href="#cms-cu">Streaming Algorithms: Count-Min Sketch with Conservative Updates</a></li>
+  <li><a href="#no-regret-caching">No-Regret Caching and Similarity Caching</a></li>
+
+  <li><a href="#kelly-auctions">Repeated Proportional Allocation (Kelly) Auctions</a></li>
+</ul>
+
+
+
+<h2 id="cms-cu">Streaming Algorithms: Count-Min Sketch with Conservative Updates</h2>
+<p>
+  <strong>Context.</strong> Online counting of item occurrences in high-rate data streams is essential
+  for extracting key features (e.g., detecting top-k items). Since streams may contain billions
+  of distinct items, algorithms must operate with sublinear memory. This inevitably introduces errors.
+  The Count-Min Sketch (CMS) is a widely used solution: it maintains a compact counter array
+  that supports approximate frequency queries with a memory–accuracy trade-off.
+  A refinement, CMS with Conservative Update (CMS-CU), improves accuracy, but unlike the vanilla CMS,
+  theoretical guarantees for CMS-CU have long been missing.
+</p>
+
+<p>
+  <strong>Contributions.</strong> We provide tractable analytic frameworks that bound the frequency estimation
+  error of CMS-CU in two complementary regimes:
+</p>
+<ul>
+  <li><em>Frequent items under stationary stochastic streams</em> — see <a href="#C1">[C1]</a>, <a href="#J1">[J1]</a>.</li>
+  <li><em>Infrequent items under arbitrary streams</em> — see <a href="#C5">[C5]</a>, <a href="#J3">[J3]</a>.</li>
+</ul>
+<p>
+
+
+  For both settings, the main obstacle is dealing with processes similar to balls and bins with power of d,
+  except that, on ties, all minimal bins among selected ones are incremented instead of a tie‑breaking
+  rule where a single bin is incremented. In [C1, J1], we show that the analysis boils down to studying a
+  constrained variant of the aforementioned process: a random hypergraph is drawn once,
+  its vertices are the counters, each hyperedge encodes an admissible d‑tuple, and each edge
+  is selected at every step according to a fixed, non‑uniform probability distribution modeling the heterogeneity of the items in the stream.
+  On the other hand, in [C5, J3], all hyperedges are admissible and have homogeneous probabilities of being selected.</p>
+
+<h4>Publications</h4>
+<ul>
+  <li id="J3">[J3] <a href="https://dl.acm.org/doi/10.1145/3727135">Universal and Tight Bounds on Counting Errors of Count-Min Sketch with Conservative Updates</a><br />
+      <strong>Younes Ben Mazziane</strong>, Othmane Marfoq<br />
+      <strong>Proc. ACM Meas. Anal. Comput. Syst.</strong>, Volume 9, 2025
+  </li>
+
+  <li id="C5">[C5] <a href="https://dl.acm.org/doi/10.1145/3726854.3727329">Universal and Tight Bounds on Counting Errors of Count-Min Sketch with Conservative Updates</a><br />
+      <strong>Younes Ben Mazziane</strong>, Othmane Marfoq<br />
+      <strong>ACM SIGMETRICS</strong>, 2025
+  </li>
+
+  <li id="J1">[J1] <a href="https://doi.org/10.1016/j.comnet.2022.109315">Analyzing Count-Min Sketch with Conservative Updates</a><br />
+      <strong>Younes Ben Mazziane</strong>, Sara Alouf, Giovanni Neglia<br />
+      <strong>Computer Networks</strong>, Volume 217, 2022
+  </li>
+
+  <li id="C1">[C1] <a href="https://ieeexplore.ieee.org/document/9798146">A Formal Analysis of the Count-Min Sketch with Conservative Updates</a><br />
+      <strong>Younes Ben Mazziane</strong>, Sara Alouf, Giovanni Neglia<br />
+      <strong>IEEE INFOCOM Workshops</strong>, 2022
+  </li>
+</ul>
+
+
+
+        <h2 id="no-regret-caching">No‑Regret Caching and Similarity Caching</h2>
+        <p><strong>Context (No‑Regret Caching).</strong> Caches are small memories that speed up data retrieval. Caching policies strategically select cache content based on previous requests to maximize a utility function,
+        such as the number of requests answered directly by the cache.
+        Worst‑case analysis of caching algorithms evaluates their performance against an optimal policy with knowledge of future requests.
+        One way to do that is to consider the regret metric, which is the difference between the utility of a static optimum and that of the algorithm.
+        Numerous caching policies that leverage online convex optimization and exhibit vanishing regret have been proposed.
+        Nevertheless, these algorithms are computationally expensive and necessitate complete knowledge of prior requests, which may not be feasible in practical scenarios like caching at a cellular base station.</p>
+
+
+
+
+        <p><strong>Contributions.</strong> In <a href="https://arxiv.org/abs/2503.02758">[J4</a>, <a href="https://arxiv.org/abs/2309.02055">C3]</a>), we show that a Follow‑The‑Perturbed Leader adaptation achieves near‑optimal regret bounds in a partial‑observability setting with O(1) update time.</p>
+
+        <h4>Publications</h4>
+<ul>
+  <li>[J4]<a href="https://arxiv.org/abs/2503.02758">Efficient and Optimal No-Regret Caching under Partial Observation</a><br />
+      <strong>Younes Ben Mazziane</strong>, Francescomaria Faticanti, Sara Alouf, Giovanni Neglia
+    <br/>
+     submitted to <strong> IEEE/ACM Transactions
+    on Networking</strong> (major revision)</li>
+  <li>[C3]<a href="https://arxiv.org/abs/2309.02055">No-Regret Caching with Noisy Request Estimates</a><br />
+      <strong>Younes Ben Mazziane</strong>, Francescomaria Faticanti, Giovanni Neglia, Sara Alouf <br/> <strong>IEEE VCC</strong>, 2023</li>
+</ul>
+
+
+        <p><strong>Context (Similarity Caching).</strong> In this problem, items are represented as points within a metric space, enabling the quantification of similarity between any two items through their distance.
+        Similarity caching extends the traditional caching problem by allowing requests for items to be approximately satisfied with similar cached items.
+        The objective is to optimize a utility function that considers how similar the requested item is to the cached item used for the response.</p>
+
+        <p><strong>Contributions.</strong> In <a href="https://doi.org/10.1016/j.comnet.2024.110206">[J2</a>, <a href="https://ieeexplore.ieee.org/document/10000890">C2]</a>, we propose an analytical framework for computing the hit ratio, i.e., the fraction of requests satisfied directly by the cache,
+        of an adaptation of the well‑known Least‑Recently‑Used (LRU) policy to similarity caching under stationary requests.
+        This computation is challenging as it involves examining a Markov process with exponentially growing state space.
+        To make the problem tractable, we introduced a surrogate similarity caching policy with independent caching decisions
+        and identified conditions where this fictitious policy closely approximates the LRU‑based similarity caching variant.</p>
+
+     <h4>Publications</h4>
+<ul>
+  <li>[J2]<a href="https://doi.org/10.1016/j.comnet.2024.110206">TTL Model for an LRU-based Similarity Caching Policy</a><br />
+      <strong>Younes Ben Mazziane</strong>, Sara Alouf, Giovanni Neglia, Daniel S. Menasche <br/> <strong>Computer Networks, 2024</strong></li>
+  <li>[C2]<a href="https://ieeexplore.ieee.org/document/10000890">Computing the Hit Rate of Similarity Caching</a><br />
+      <strong>Younes Ben Mazziane</strong>, Sara Alouf, Giovanni Neglia, Daniel S. Menasche <br/> <strong>IEEE GLOBECOM , 2022</strong></li>
+</ul>
+
+
+
+        <h2 id="kelly-auctions">Repeated Proportional Allocation Auctions Games</h2>
+        <p><strong>Context.</strong> Decentralized resource allocation in large‑scale systems is a fundamental problem that has been extensively studied in network economics.
+        The Kelly, also called proportional‑auction, is a simple and efficient mechanism in which each agent receives a share of the resource proportional to its bid.
+        The resulting game has been shown to achieve near‑optimal social welfare at its Nash equilibrium.
+        These guarantees, however, assume that agents can actually play this equilibrium, which in turn requires every player to know the utilities of all others.
+        A more realistic setting assumes that each agent knows only its own utility, yet can adapt its bid over repeated, synchronous rounds using limited feedback, such as the aggregate bid of all players.</p>
+        <p><strong>Contributions.</strong> In <a href="publications.html#C4">[C4]</a>, we study the repeated game induced by the Kelly mechanism. We prove that when all agents update
+        their bids via a dual‑averaging no‑regret algorithm and their utilities grow logarithmically with the resource they receive, the system converges to the Nash equilibrium of the one‑shot game.</p>
+<h4>Publications</h4>
+<ul>
+  <li>[C5]<a href="https://https://ieeexplore.ieee.org/document/11123293">Learning to Bid in Proportional Allocation Auctions with Budget Constraints</a><br />
+      <strong>Younes Ben Mazziane</strong>, Cleque-Marlain Mboulou-Moutoubi, Francesco De Pellegrini, Eitan Altman <br/> <strong>IEEE WiOpt, 2025</strong></li>
+
+  <li>[C6]<a href="https://https://ieeexplore.ieee.org/document/??">Best-Response Learning in Budgeted alpha-Fair Kelly Mechanisms</a><br />
+       Cleque-Marlain Mboulou-Moutoubi, <strong>Younes Ben Mazziane</strong>, Francesco De Pellegrini, Eitan Altman <br/> <strong>Netgcoop, 2025</strong></li>
+</ul>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
