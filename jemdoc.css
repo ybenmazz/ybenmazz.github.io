@@ -373,6 +373,5 @@ border: solid #527bbd 2px;
 }
 
 li {
-  margin-bottom: 1em;
-
+  margin-bottom: 0.6em; /* adjust the value to your liking */
 }
