@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <link rel="stylesheet" href="jemdoc.css" type="text/css" />
+  <title>Research Topics- Younes Ben Mazziane</title>
+</head>
+<body>
+
+  <table id="tlayout">
+    <tr>
+      <td id="layout-menu">
+        <div class="menu-item"><a href="index.html">Home</a></div>
+        <div class="menu-item"><a href="publications.html">Publications</a></div>
+        <div class="menu-item"><a href="research.html" class="current">Research</a></div>
+        <div class="menu-item"><a href="teaching.html">Teaching</a></div>
+      </td>
+      <td id="layout-content">
+        <div id="toptitle">
+          <h1>Research</h1>
+        </div>
+
+
+
+ <h3> Research Areas</h3>
+<ul>
+    <li> <a href="#analysis_alg"> Analysis of randomized networking algorithms </a> </li>
+
+    <li> <a href="#analysis_alg"> Online learning and Game theory for networking </a> </li>
+
+</ul>
+
+<h2 id="analysis_alg"> Analysis of randomized networking algorithms </h2>
+
+
+        <p>
+            Theoretical analysis of randomized algorithms can yield simple formulas that capture a performance metric of an algorithm as a function of its input and parameters,
+            thereby reducing the need for computationally expensive simulations, especially when the input is stochastic.
+            Such efficient performance evaluation, in turn, makes it possible to tune algorithm parameters to achieve a desired accuracy level
+            or to adapt them to specific characteristics of the input.
+            I analyzed a widely used streaming algorithm,  Count-Min Sketch with Conservative Updates,
+            and natural adaptations of the classical Least Recently Used (LRU) policy to similarity caching.
+
+
+          <p>
+          <strong> Motivation. </strong> Streaming algorithms are designed to maintain approximate statistics, such as item frequencies,
+                using limited memory in environments with very high data arrival rates.
+                They play a fundamental role in applications such as network monitoring and clickstream analytics.
+                Similarity caching generalizes the classical caching problem by allowing requests to be served approximately through similar cached items,
+                with the objective of maximizing a utility function that quantifies the similarity between the requested item and the cached item
+                used to serve it. Such models are particularly relevant in applications such as recommendation systems.
+        </p>
+
+<p>
+    <strong> Count-Min Sketch with Conservative Updates (CU).</strong>  My work provides mathematical formulas characterizing the accuracy for infrequent items under arbitrary streams
+    in <a href="#C5">[C5]</a>, <a href="#J3">[J3]</a>, and for frequent items under stochastic streams in <a href="#C1">[C1]</a>, <a href="#J1">[J1]</a>.
+    The main analytical obstacle in this setting is the study of processes related to balls-and-bins models with the power-of-d choices,
+    except that, in the presence of ties, all bins attaining the minimum among the selected ones are incremented,
+    rather than applying a tie-breaking rule that increments only one bin. To overcome this difficulty,
+    we introduced surrogate processes that are tractable and can be analyzed using concentration inequalities and Markovian techniques.
+</p>
+
+<p>
+    <strong> LRU in similarity caching.</strong> In <a href="#J2">[J2</a>,
+    <a href="#C2">C2]</a>, we provide mathematical formulas for computing the expected hit ratio of
+         adaptations of LRU to similarity caching under stationary requests. Under this assumption, the state of the cache is a time-homogeneous Markov chain
+        but with an exponentially growing state space. To address this difficulty, we introduced a surrogate similarity caching policy with independent caching decisions
+        across items, and identified conditions where this policy closely approximates the LRU‑based similarity caching variant.
+
+</p>
+
+
+
+     <h4>Publications</h4>
+<ul>
+
+</ul>
+
+
+<ul>
+  <li id="J3">[J3] <a href="https://dl.acm.org/doi/10.1145/3727135">Universal and Tight Bounds on Counting Errors of Count-Min Sketch with Conservative Updates</a><br />
+      <strong>Younes Ben Mazziane</strong>, Othmane Marfoq<br />
+      <strong>Proc. ACM Meas. Anal. Comput. Syst.</strong>, Volume 9, 2025
+  </li>
+
+  <li id="C5">[C5] <a href="https://dl.acm.org/doi/10.1145/3726854.3727329">Universal and Tight Bounds on Counting Errors of Count-Min Sketch with Conservative Updates</a><br />
+      <strong>Younes Ben Mazziane</strong>, Othmane Marfoq<br />
+      <strong>ACM SIGMETRICS</strong>, 2025
+  </li>
+
+  <li id="J1">[J1] <a href="https://doi.org/10.1016/j.comnet.2022.109315">Analyzing Count-Min Sketch with Conservative Updates</a><br />
+      <strong>Younes Ben Mazziane</strong>, Sara Alouf, Giovanni Neglia<br />
+      <strong>Computer Networks</strong>, Volume 217, 2022
+  </li>
+
+  <li id="C1">[C1] <a href="https://ieeexplore.ieee.org/document/9798146">A Formal Analysis of the Count-Min Sketch with Conservative Updates</a><br />
+      <strong>Younes Ben Mazziane</strong>, Sara Alouf, Giovanni Neglia<br />
+      <strong>IEEE INFOCOM Workshops</strong>, 2022
+  </li>
+
+    <li id ="J2"> [J2]<a href="https://doi.org/10.1016/j.comnet.2024.110206">TTL Model for an LRU-based Similarity Caching Policy</a><br />
+      <strong>Younes Ben Mazziane</strong>, Sara Alouf, Giovanni Neglia, Daniel S. Menasche <br/> <strong>Computer Networks, 2024</strong></li>
+  <li id="C2" >[C2]<a href="https://ieeexplore.ieee.org/document/10000890">Computing the Hit Rate of Similarity Caching</a><br />
+      <strong>Younes Ben Mazziane</strong>, Sara Alouf, Giovanni Neglia, Daniel S. Menasche <br/> <strong>IEEE GLOBECOM , 2022</strong></li>
+</ul>
+
+
+
+<h2 id="online_game_networking"> Online learning and Game theory for networking </h2>
+
+
+         Online learning, or more broadly online optimization, provides a theoretical framework for sequential decision-making
+          without knowledge of the future, while allowing decisions to gradually adapt over time.
+          It offers algorithms with performance guarantees expressed in terms of the regret metric.  and, for many online decision problems,
+          yields both efficient methods and provable regret bounds.
+
+          Game theory, on the other hand, formalizes systems involving multiple interacting agents and provides solution concepts such as Nash equilibrium and related equilibrium notions.
+          Both theories are fundamental, have a wide range of applications, and are particularly important in networking.
+
+          We propose no-regret caching policies for partially observable settings, where the caching algorithm only has access to a subset of the requests.
+          We show that these policies achieve optimal regret bounds while maintaining constant amortized time complexity.
+          We also study repeated bandwidth-sharing games and prove that, under behavioral models in which agents use no-regret learning algorithms,
+          the dynamics converge to a Nash equilibrium of the stage game.
+
+
+
+
+
+                  <h4>Publications</h4>
+<ul>
+  <li>[J4]<a href="https://arxiv.org/abs/2503.02758">Efficient and Optimal No-Regret Caching under Partial Observation</a><br />
+      <strong>Younes Ben Mazziane</strong>, Francescomaria Faticanti, Sara Alouf, Giovanni Neglia
+    <br/>
+      <strong> IEEE/ACM Transactions
+    on Networking</strong> </li>
+  <li>[C3]<a href="https://arxiv.org/abs/2309.02055">No-Regret Caching with Noisy Request Estimates</a><br />
+      <strong>Younes Ben Mazziane</strong>, Francescomaria Faticanti, Giovanni Neglia, Sara Alouf <br/> <strong>IEEE VCC</strong>, 2023</li>
+     <li>[C5]<a href="https://https://ieeexplore.ieee.org/document/11123293">Learning to Bid in Proportional Allocation Auctions with Budget Constraints</a><br />
+      <strong>Younes Ben Mazziane</strong>, Cleque-Marlain Mboulou-Moutoubi, Francesco De Pellegrini, Eitan Altman <br/> <strong>IEEE WiOpt, 2025</strong></li>
+
+  <li>[C6]<a href="https://https://ieeexplore.ieee.org/document/??">Best-Response Learning in Budgeted alpha-Fair Kelly Mechanisms</a><br />
+       Cleque-Marlain Mboulou-Moutoubi, <strong>Younes Ben Mazziane</strong>, Francesco De Pellegrini, Eitan Altman <br/> <strong>Netgcoop, 2025</strong></li>
+</ul>
+
+
+        <h2 id="no-regret-caching">No‑Regret Caching and Similarity Caching</h2>
+        <p><strong>Context (No‑Regret Caching).</strong> Caches are small memories that speed up data retrieval. Caching policies strategically select cache content based on previous requests to maximize a utility function,
+        such as the number of requests answered directly by the cache.
+        Worst‑case analysis of caching algorithms evaluates their performance against an optimal policy with knowledge of future requests.
+        One way to do that is to consider the regret metric, which is the difference between the utility of a static optimum and that of the algorithm.
+        Numerous caching policies that leverage online convex optimization and exhibit vanishing regret have been proposed.
+        Nevertheless, these algorithms are computationally expensive and necessitate complete knowledge of prior requests, which may not be feasible in practical scenarios like caching at a cellular base station.</p>
+
+
+
+
+        <p><strong>Contributions.</strong> In <a href="https://arxiv.org/abs/2503.02758">[J4</a>, <a href="https://arxiv.org/abs/2309.02055">C3]</a>), we show that a Follow‑The‑Perturbed Leader adaptation achieves near‑optimal regret bounds in a partial‑observability setting with O(1) update time.</p>
+
+
+
+
+
+
+
+
+        <h2 id="kelly-auctions">Repeated Proportional Allocation Auctions Games</h2>
+        <p><strong>Context.</strong> Decentralized resource allocation in large‑scale systems is a fundamental problem that has been extensively studied in network economics.
+        The Kelly, also called proportional‑auction, is a simple and efficient mechanism in which each agent receives a share of the resource proportional to its bid.
+        The resulting game has been shown to achieve near‑optimal social welfare at its Nash equilibrium.
+        These guarantees, however, assume that agents can actually play this equilibrium, which in turn requires every player to know the utilities of all others.
+        A more realistic setting assumes that each agent knows only its own utility, yet can adapt its bid over repeated, synchronous rounds using limited feedback, such as the aggregate bid of all players.</p>
+        <p><strong>Contributions.</strong> In <a href="publications.html#C4">[C4]</a>, we study the repeated game induced by the Kelly mechanism. We prove that when all agents update
+        their bids via a dual‑averaging no‑regret algorithm and their utilities grow logarithmically with the resource they receive, the system converges to the Nash equilibrium of the one‑shot game.</p>
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

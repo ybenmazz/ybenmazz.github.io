@@ -7,12 +7,7 @@
   <title>Younes Ben Mazziane</title>
 </head>
 <body>
-  <!--
-    The main page is now organized with a simple menu on the left.  The menu lets
-    visitors navigate between the home page, a publications list, detailed research
-    topics and a teaching section.  The textual content from the original page is
-    preserved exactly, but the layout has been restructured for improved clarity.
-  -->
+
   <table id="tlayout">
     <tr>
       <td id="layout-menu">
@@ -45,24 +40,134 @@
 
 
         <h2>About Me</h2>
-        <p>I am a postdoctoral researcher at the University of Avignon under the supervision of <a href="https://scholar.google.com/citations?user=EYyOnEkAAAAJ&hl=fr&oi=ao">Francesco De Pellegrini</a> and <a href="https://www-sop.inria.fr/members/Eitan.Altman/">Eitan Altman</a>.
-        I obtained my Ph.D. in Computer Science from Université Côte d’Azur and Inria Sophia Antipolis in 2024 under the supervision of <a href="https://www-sop.inria.fr/members/Sara.Alouf/">Sara Alouf</a> and <a href="https://www-sop.inria.fr/members/Giovanni.Neglia/">Giovanni Neglia</a>.
-        My research is characterized by the application of probability theory to analyze randomized streaming and caching algorithms.
-        Recently, I started working on repeated resource allocation games. More details are available in my <a href="Docs/enCV.pdf" download>CV</a>.</p>
+        <p>I am a postdoctoral researcher at the University of Avignon under the supervision of <a href="https://scholar.google.com/citations?user=EYyOnEkAAAAJ&hl=fr&oi=ao">Francesco De Pellegrini</a>
+          and <a href="https://www-sop.inria.fr/members/Eitan.Altman/">Eitan Altman</a>.
+        I obtained my Ph.D. in Computer Science from Université Côte d’Azur and Inria Sophia Antipolis in 2024 under the supervision of
+          <a href="https://www-sop.inria.fr/members/Sara.Alouf/">Sara Alouf</a> and <a href="https://www-sop.inria.fr/members/Giovanni.Neglia/">Giovanni Neglia</a>.
+
+          My research focuses on the theoretical analysis and performance evaluation of networking algorithms.
+          The objective is to understand their behavior
+          and tune their parameters to the characteristics of the workload. To this end, I use mathematical tools such as Markov processes, stochastic approximation,
+          online optimization, and game theory.
+        </p>
+         <p> More details are available in my <a href="Docs/en_cv.pdf" download>CV</a>.</p>
+
 
 
             <h2> News  </h2>
 
         <ul>
-          <li> (Nov 17, 2025) Paper accepted in IEEE/ACM Transactions on Networking
+          <li> (Nov 17, 2025) Paper accepted in IEEE/ACM Transactions on Networking </li>
+          <li> (June  12, 2025) Presented a paper at SIGMETRICS </li>
         </ul>
 
 
-        <h2>Ph.D. Thesis (2020–2024)</h2>
-        <p>My Ph.D. thesis, <em>Probabilistic Analysis for Caching</em>, provides rigorous performance guarantees for probabilistic streaming and caching algorithms. The analysis of these algorithms is complex, as it involves studying analytically intractable stochastic processes. We circumvent this difficulty by introducing novel surrogate processes that capture the real dynamics yet remain tractable. These surrogates are then analyzed with Markov-process techniques, renewal theory, concentration inequalities, or online convex optimization, yielding tight performance bounds.</p>
+<h2>Research highlights</h2>
 
-        <h2>Postdoc Work (2024–now)</h2>
-        <p>In my postdoc, I'm working on repeated games arising from the competition among agents in proportional allocation auctions. The objective is to capture the system's evolution based on agents' selfish behavior. To answer these questions, our study integrates concepts from game theory, stochastic approximation, and online convex optimization.</p>
+<div class="highlights-header">
+  <div></div>
+    <div>Theoretical contribution</div>
+   <div>Practical relevance</div>
+
+
+</div>
+
+<div class="highlight-row">
+  <div class="highlight-label">
+    <a href="publications/elastic_sketch.pdf"> [Preprint'26a] </a>
+    <a href="https://dl.acm.org/doi/10.1145/3727135">[SIGMETRICS'25]</a><br>
+    <a href="https://doi.org/10.1016/j.comnet.2022.109315">[ComNet'22]</a>
+  </div>
+
+     <div class="highlight-theory">
+
+         <li> Tractable analysis of a variant of <strong>the balls-and-bins problem with power of choice</strong>,
+    in which all minimum-load bins among the selected ones are incremented in the event of ties.  </li>
+         <li> Asymptotic analysis of a multi-branch asymmetric random-walk Markov chain.  </li>
+
+
+  </div>
+  <div class="highlight-application">
+    Efficient performance evaluation and parameter tuning of <strong>Count-Min Sketch
+      with Conservative Updates</strong> and <strong>Elastic Sketch</strong>, popular streaming algorithms, under different workload characteristics.
+      <strong>Streaming algorithms</strong> provide approximate statistics, such as item frequencies,
+      using limited memory in environments with very high data arrival rates.
+  </div>
+
+
+</div>
+<div class="highlight-row">
+  <div class="highlight-label">
+    <a href="publications/TON26.pdf">[IEEE/ACM TON'26]</a>
+  </div>
+
+    <div class="highlight-theory">
+      <li>No-regret guarantees for <strong>Follow-the-Perturbed-Leader</strong> in online linear optimization
+      over <strong>non-convex decision sets</strong> under partial observability. This result extends previous no-regret guarantees
+        for label-efficient forecasters with <em>Hedge</em> in the experts problem <a href="https://ieeexplore.ieee.org/document/1435657">[IEEE/ACM TIT'05]</a>. </li>
+  </div>
+
+   <div class="highlight-application">
+       Caching algorithms that, <strong>for any request sequence</strong>, asymptotically perform at least as well as the optimal static policy,
+       even under <strong>partial observability</strong>, while requiring only <strong>O(1)</strong> expected amortized update time.
+       Partial observability is particularly relevant in <strong>femto-caching</strong> systems,
+       where a base station (BS) jointly manages the contents of multiple edge caches,
+       and full visibility of all requests at the BS would require continuous communication with the caches.
+
+  </div>
+
+    </div>
+
+
+     <div class="highlight-row">
+  <div class="highlight-label">
+    <a href="publications/learning_in_kelly_games.pdf">[Preprint'26b] </a>
+    <a href="https://ieeexplore.ieee.org/document/11123293">[WiOpt'25]</a><br>
+    <a href="https://link.springer.com/chapter/10.1007/978-3-032-09315-8_9">[NETGCOOP'25]</a>
+  </div>
+
+
+    <div class="highlight-theory">
+      <li> Convergence of <strong>no-regret learning</strong> and <strong>best-response</strong> dynamics in repeated
+    bandwidth-sharing/proportional allocation games to the Nash equilibrium of the stage game.</li>
+  </div>
+
+   <div class="highlight-application">
+    Supports <strong>proportional allocation auctions</strong> as a practical mechanism for fair and efficient
+    bandwidth sharing, for example in network slicing.
+  </div>
+
+
+
+</div>
+
+<div class="highlight-row">
+  <div class="highlight-label">
+    <a href="https://doi.org/10.1016/j.comnet.2024.110206"> [ComNet'24] </a>
+  </div>
+
+    <div class="highlight-theory">
+    <strong>Mean-field-type approximations</strong> for adaptations of the classical Least Recently Used
+    policy to similarity caching under stationary stochastic request processes.
+  </div>
+
+  <div class="highlight-application">
+    Efficient performance evaluation and parameter tuning of <strong> LRU </strong> adaptations to <strong>similarity caching</strong>;
+      a generalization of the classical caching problem by allowing requests to be served approximately by similar cached items.
+      Similarity caching is particularly relevant in applications such as recommendation systems.
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
 
       </td>
     </tr>

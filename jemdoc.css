@@ -375,3 +375,50 @@ border: solid #527bbd 2px;
 li {
   margin-bottom: 0.6em; /* adjust the value to your liking */
 }
+
+.highlights-header {
+  display: grid;
+  grid-template-columns: 180px 1fr 1fr;
+  gap: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.highlight-row {
+  display: grid;
+  grid-template-columns: 180px 1fr 1fr;
+  gap: 1.2rem;
+  padding: 1rem 0;
+  border-top: 1px solid #ddd;
+  align-items: start;
+}
+
+.highlight-label {
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.highlight-label a {
+  text-decoration: none;
+}
+
+.highlight-theory,
+.highlight-application {
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .highlights-header {
+    display: none;
+  }
+
+  .highlight-row {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .highlight-label {
+    margin-bottom: 0.2rem;
+  }
+}
+
